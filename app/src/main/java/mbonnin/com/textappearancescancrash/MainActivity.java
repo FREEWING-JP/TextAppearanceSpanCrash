@@ -16,12 +16,5 @@ public class MainActivity extends AppCompatActivity {
         setContentView(new AppCompatEditText(this));
 
         WebView webview = new WebView(this);
-        webview.getSettings().setJavaScriptEnabled(true);
-        webview.setWebChromeClient(new WebChromeClient() {
-            public boolean onJsAlert(WebView view, String url, String message, JsResult result) {
-                result.confirm();
-                return true;
-            }
-        });
     }
 }
